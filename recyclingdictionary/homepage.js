@@ -24,14 +24,6 @@ function search(){
     listElem.style.display = noResults ? "none" : "block";
 }
 function loadSearchData() {
-    // Data to be used in the searchbar (https://www.makeuseof.com/javascript-searchbar-simple-using-list-strings/)
-    /*let searchItems = [
-      'Paper',
-      'Plastic Cup',
-      'Plastic Bag',
-      'Paper Cup',
-      'Book'
-    ];*/
     let searchItems = []
     fetch("recyclingitems.json")
         .then(response => response.json())
@@ -42,12 +34,16 @@ function loadSearchData() {
             let listElem = document.getElementById("list");
             // Add each data item as an <a> tag
             searchItems.forEach((item)=>{
-                let a = document.createElement("a");
-                a.innerText = item.Name;
+                let b = document.createElement("button");
+                b.innerText = item.Name;
                 //add the class name
-                a.classList.add("itemsFromList");
+                b.classList.add("itemsFromList");
+                // Add click event to navigate to result.html
+                b.addEventListener("click", () => {
+                    window.location.href = "result.html?q=" + item.identifier;
+                });
                 //add to list element
-                listElem.appendChild(a);
+                listElem.appendChild(b);
             })
         })
         .catch(error => console.log(error));

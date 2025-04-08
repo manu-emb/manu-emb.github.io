@@ -11,6 +11,11 @@
     font-size: 50px;
     color:red
     }
+.titleResult {
+    margin-top: 10px;
+    font-size: 25px;
+    color:red
+}
 #textBox {
     margin-top: 0;
     height: 30px;
