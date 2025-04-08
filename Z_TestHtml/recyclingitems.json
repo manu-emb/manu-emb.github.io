@@ -1,0 +1,26 @@
+[
+    {
+        "Name" : "Paper",
+        "canRecycle" : true        
+    },
+    {
+        "Name" : "Plastic Cup",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Plastic Bag",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Paper Cup",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Book",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Null",
+        "canRecycle" : null
+    }
+]
